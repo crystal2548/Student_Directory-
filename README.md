@@ -1,16 +1,28 @@
-# React + Vite
+#  Student Directory
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, high-performance student academic records management system built for TU (Tribhuvan University) standards. Manage student data, track attendance, and automate academic calculations with ease.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 📋 Student Management
+- **Full CRUD Support** — Add, edit, and remove student records efficiently.
+- **Course Variety** — Built-in support for **BSc CSIT, BCA, and BBS** courses.
+- **Attendance Tracking** — Real-time toggle for Present/Absent status.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 📊 Academic Logic (TU Nepal Standards)
+- **Automatic GPA Calculation** — Instant calculation on a **4.0 scale** based on semester inputs.
+- **TU Grading Schema** — Implements the strict 60/40 marks distribution and 40% component-wise pass rule.
+- **Performance Classification** — Intelligent labeling (Distinction, First Division, etc.) based on overall performance.
+- **Smart Letter Grades** — Dynamic percentage-to-letter-grade mapping (A, A-, B+, B, etc.).
 
-## Expanding the ESLint configuration
+### 🎨 UI/UX & Utility
+- **Dark/Light Mode** — Sleek, responsive theme switching for any environment.
+- **View Modes** — Seamlessly switch between **Grid (Card)** and **List (Row)** layouts.
+- **Real-time Filters** — Search by name or filter by course and status instantly.
+- **Dashboard Stats** — Live overview of total students, present count, and academic achievements.
+- **Local Persistence** — Zero configuration required; all data is saved to `localStorage`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
