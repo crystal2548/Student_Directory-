@@ -1,14 +1,19 @@
 import { useState } from "react";
 import Badge from "./Badge";
 import Button from "./Button";
-import { calcSemGPA } from "../data/gradeHelpers";
+import { calcSemGPA, syncSemesters } from "../data/gradeHelpers";
 import "./StudentRow.css";
 
 let StudentRow = ({ student, isTopPerformer, onToggle, onDelete, onEdit, onViewMarks }) => {
 
-  let activeSemesters = student.semesters
-    .map((s, i) => ({ gpa: calcSemGPA(s), index: i }))
-    .filter((s) => s.gpa > 0);
+  let synced = syncSemesters(student.course, student.semesters);
+  let activeSemesters = synced
+    .map((s, i) => ({
+      gpa: calcSemGPA(s),
+      index: i,
+      hasMarks: s.some(sub => sub.theory > 0 || sub.practical > 0)
+    }))
+    .filter((s) => s.hasMarks);
 
   return (
     <div className={`student-row ${!student.isPresent ? "student-row-absent" : ""}`}>

@@ -10,18 +10,18 @@ let students = [
     isPresent: true,
     semesters: [
       [
-        { name: "C Programming",  theory: 85, practical: 80 },
-        { name: "Digital Logic",  theory: 78, practical: 0  },
-        { name: "Mathematics I",  theory: 90, practical: 0  },
-        { name: "Physics",        theory: 72, practical: 65 },
-        { name: "English",        theory: 88, practical: 0  },
+        { name: "Introduction to IT", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "C Programming", theory: 75, practical: 35, theoryFM: 60, practicalFM: 40 },
+        { name: "Digital Logic", theory: 55, practical: 38, theoryFM: 60, practicalFM: 40 },
+        { name: "Mathematics I", theory: 58, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Physics", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 }
       ],
       [
-        { name: "Data Structures", theory: 92, practical: 88 },
-        { name: "OOP with Java",   theory: 87, practical: 85 },
-        { name: "Mathematics II",  theory: 83, practical: 0  },
-        { name: "Microprocessor",  theory: 76, practical: 70 },
-        { name: "Probability",     theory: 89, practical: 0  },
+        { name: "Discrete Structure", theory: 80, practical: 0, theoryFM: 80, practicalFM: 0 },
+        { name: "Object Oriented Programming", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Microprocessor", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Mathematics II", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Statistics I", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 }
       ],
       [], [], [], [], [], [],
     ],
@@ -34,20 +34,13 @@ let students = [
     isPresent: true,
     semesters: [
       [
-        { name: "C Programming",  theory: 95, practical: 92 },
-        { name: "Mathematics I",  theory: 91, practical: 0  },
-        { name: "English",        theory: 88, practical: 0  },
-        { name: "Account Basics", theory: 86, practical: 0  },
-        { name: "Digital Logic",  theory: 93, practical: 88 },
+        { name: "Computer Fundamentals & Applications", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Society & Technology", theory: 100, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "English I", theory: 100, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "Mathematics I", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Digital Logic", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 }
       ],
-      [
-        { name: "Data Structures", theory: 90, practical: 87 },
-        { name: "OOP",             theory: 94, practical: 91 },
-        { name: "Mathematics II",  theory: 89, practical: 0  },
-        { name: "Web Tech",        theory: 96, practical: 94 },
-        { name: "Network Basics",  theory: 85, practical: 0  },
-      ],
-      [], [], [], [],
+      [], [], [], [], [], [], [],
     ],
   },
   {
@@ -58,11 +51,11 @@ let students = [
     isPresent: false,
     semesters: [
       [
-        { name: "C Programming", theory: 55, practical: 50 },
-        { name: "Digital Logic", theory: 48, practical: 0  },
-        { name: "Mathematics I", theory: 60, practical: 0  },
-        { name: "Physics",       theory: 52, practical: 45 },
-        { name: "English",       theory: 70, practical: 0  },
+        { name: "Introduction to IT", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "C Programming", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Digital Logic", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Mathematics I", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Physics", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 }
       ],
       [], [], [], [], [], [], [],
     ],
@@ -75,20 +68,13 @@ let students = [
     isPresent: true,
     semesters: [
       [
-        { name: "English",       theory: 80, practical: 0 },
-        { name: "Nepali",        theory: 75, practical: 0 },
-        { name: "Accounting",    theory: 88, practical: 0 },
-        { name: "Economics",     theory: 82, practical: 0 },
-        { name: "Business Math", theory: 78, practical: 0 },
+        { name: "Business English", theory: 85, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "Business Statistics", theory: 55, practical: 35, theoryFM: 60, practicalFM: 40 },
+        { name: "Microeconomics for Business", theory: 72, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "Principles of Management", theory: 70, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "Financial Accounting and Analysis", theory: 82, practical: 0, theoryFM: 100, practicalFM: 0 }
       ],
-      [
-        { name: "Business Law", theory: 85, practical: 0 },
-        { name: "Finance",      theory: 90, practical: 0 },
-        { name: "Marketing",    theory: 83, practical: 0 },
-        { name: "Statistics",   theory: 79, practical: 0 },
-        { name: "HRM",          theory: 87, practical: 0 },
-      ],
-      [], [],
+      [], [], [],
     ],
   },
   {
@@ -99,13 +85,37 @@ let students = [
     isPresent: true,
     semesters: [
       [
-        { name: "C Programming",  theory: 65, practical: 60 },
-        { name: "Mathematics I",  theory: 58, practical: 0  },
-        { name: "English",        theory: 72, practical: 0  },
-        { name: "Account Basics", theory: 60, practical: 0  },
-        { name: "Digital Logic",  theory: 68, practical: 55 },
+        { name: "Computer Fundamentals & Applications", theory: 45, practical: 32, theoryFM: 60, practicalFM: 40 },
+        { name: "Society & Technology", theory: 72, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "English I", theory: 68, practical: 0, theoryFM: 100, practicalFM: 0 },
+        { name: "Mathematics I", theory: 42, practical: 28, theoryFM: 60, practicalFM: 40 },
+        { name: "Digital Logic", theory: 48, practical: 30, theoryFM: 60, practicalFM: 40 }
       ],
-      [], [], [], [], [],
+      [], [], [], [], [], [], [],
+    ],
+  },
+  {
+    id: "s6",
+    name: "Samit Shrestha",
+    rollNo: "078BSCCSIT021",
+    course: "BSc CSIT",
+    isPresent: true,
+    semesters: [
+      [
+        { name: "Introduction to IT", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "C Programming", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Digital Logic", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Mathematics I", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Physics", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 }
+      ],
+      [
+        { name: "Discrete Structure", theory: 80, practical: 0, theoryFM: 80, practicalFM: 0 },
+        { name: "Object Oriented Programming", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Microprocessor", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Mathematics II", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 },
+        { name: "Statistics I", theory: 60, practical: 40, theoryFM: 60, practicalFM: 40 }
+      ],
+      [], [], [], [], [], [],
     ],
   },
 ];

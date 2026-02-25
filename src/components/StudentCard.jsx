@@ -1,17 +1,24 @@
 import { useState } from "react";
 import Badge from "./Badge";
 import Button from "./Button";
-import { calcSemGPA } from "../data/gradeHelpers";
+import { calcSemGPA, syncSemesters } from "../data/gradeHelpers";
 import "./StudentCard.css";
 
 // Destructured prop
 let StudentCard = ({ student, isTopPerformer, onToggle, onDelete, onEdit, onViewMarks }) => {
 
 
-  // Count only semesters that have at least one mark entered
-  let activeSemesters = student.semesters
-    .map((s, i) => ({ gpa: calcSemGPA(s), index: i }))
-    .filter((s) => s.gpa > 0);
+  // Sync semesters to ensure we have FM data for all subjects (handles older records)
+  let synced = syncSemesters(student.course, student.semesters);
+
+  // Count a semester as active if ANY subject has a mark entered (>0)
+  let activeSemesters = synced
+    .map((s, i) => ({
+      gpa: calcSemGPA(s),
+      index: i,
+      hasMarks: s.some(sub => sub.theory > 0 || sub.practical > 0)
+    }))
+    .filter((s) => s.hasMarks);
 
   let semCount = activeSemesters.length;
 

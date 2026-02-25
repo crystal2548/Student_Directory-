@@ -4,21 +4,20 @@ import StudentDirectory from "./pages/StudentDirectory";
 import seedStudents from "./data/students";
 
 let App = () => {
+  // Debug alert to verify code sync
+  if (typeof window !== 'undefined') {
+    console.log("App loaded - v5_force_sync");
+  }
 
   let [isDark, setIsDark] = useState(true);
 
-  let [students, setStudents] = useState(() => {
-    try {
-      let stored = localStorage.getItem("student_directory");
-      return stored ? JSON.parse(stored) : seedStudents;
-    } catch (e) {
-      return seedStudents;
-    }
-  });
+  // Temporarily ignoring storage to force-load the hardcoded data
+  let [students, setStudents] = useState(seedStudents);
 
   let [showForm, setShowForm] = useState(false);
   useEffect(() => {
-    localStorage.setItem("student_directory", JSON.stringify(students));
+    // Keep this to avoid breaking other logic, but we write to a new key
+    localStorage.setItem("student_directory_force_sync", JSON.stringify(students));
   }, [students]);
 
   let handleToggleTheme = () => {
